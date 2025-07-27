@@ -5,8 +5,9 @@
 </p>
 
 <p align="center">
-  <!-- This is where your demo GIF will go. It makes a huge impact! -->
-  <img src="./demo.gif" alt="Project Demo of Code Collaborator Platform in Action" width="800"/>
+  <a href="https://drive.google.com/file/d/1NXRpKhbyfCfVT0gpggytke_fYasEjraD/view?usp=sharing" target="_blank">
+    <img src="./demo_thumbnail.png" alt="Link to Project Demo Video" width="800"/>
+  </a>
 </p>
 
 ---
