@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: collaborator_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # This is crucial for the execution engine to work
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    image: nginx:stable-alpine
+    container_name: collaborator_frontend
+    ports:
+      - "8080:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    depends_on:
+      - backend

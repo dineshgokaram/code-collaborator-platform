@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Collaborator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" data-name="vs/editor/editor.main" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.27.0/min/vs/editor/editor.main.min.css">
+</head>
+<body>
+    <div id="main-app" class="app-container hidden">
+        <header>
+            <h1>Code Collaborator Platform</h1>
+            <div id="status">Status: Disconnected</div>
+        </header>
+        <div class="main-content">
+            <div class="sidebar">
+                <h3>Files</h3>
+                <ul><li>📄 main.py</li></ul>
+                <h3>Users</h3>
+                <ul id="user-list"></ul>
+            </div>
+            <div class="editor-area">
+                <div id="editor"></div>
+                <div id="output-panel"><pre id="output-console"></pre></div>
+            </div>
+        </div>
+        <div class="footer">
+            <button id="run-button">▶️ Run Code</button>
+        </div>
+    </div>
+    <div id="login-overlay" class="login-container">
+        <form id="login-form">
+            <h2>Login to Collaborate</h2>
+            <div id="login-error" class="error-message"></div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="user1" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" value="pass1" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>var require = { paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.27.0/min/vs' } };</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.27.0/min/vs/loader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.27.0/min/vs/editor/editor.main.nls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.27.0/min/vs/editor/editor.main.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/websocket_client.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
