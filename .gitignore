@@ -23,5 +23,3 @@ pip-delete-this-directory.txt
 
 # macOS
 .DS_Store
-# Ignore the entire backend directory
-/backend
